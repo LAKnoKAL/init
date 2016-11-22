@@ -1,0 +1,45 @@
+.navbar-default
+  top -75px
+  background $white
+  border-color $green
+  box-shadow 0 0 10px $green
+  transition top $animation-time ease-in-out
+
+  &.visible
+    top 0
+
+  .navbar-nav
+    > li
+      > a
+        padding-top 0
+        padding-bottom 0
+        line-height 55px
+        color $green
+
+      &.active
+        > a
+        > a:focus
+        > a:hover
+          background $green
+          color $white
+
+.dropdown-menu
+  > li
+    > a
+      color $green
+
+.navbar-brand
+  margin 0
+  padding-top 10px
+  padding-bottom 10px
+  height auto
+  font 28px $quicksand
+
+  a
+    color $gray
+
+    &:hover
+      text-decoration none
+
+  span
+    color $green

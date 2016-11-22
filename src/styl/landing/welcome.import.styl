@@ -1,0 +1,85 @@
+.welcome
+  display flex
+  flex-direction column
+  height 100vh
+
+  &:before
+  .carousel-inner
+    absolute top left right bottom
+
+  &:before
+    content ''
+    z-index 10
+    background $black
+    opacity .8
+
+  .welcome-logo
+    margin auto
+    z-index 15
+
+    .navbar-brand
+      font-size 10em
+
+  img
+    min-width 100%
+    min-height 100%
+
+  .scroll-down
+    overflow hidden
+    absolute left 50% bottom 40px
+    width 82px
+    height 46px
+    margin-left -41px
+    z-index 15
+
+    svg
+      margin-top -192px
+      margin-left -429px
+
+  .before-animate-1-1
+  .before-animate-1-2
+    stroke-dasharray 35px 35px
+
+  .before-animate-1-1
+    stroke-dashoffset -35px
+    animation arrow-scroll-1 2s infinite 0.2s ease-in
+
+  .before-animate-1-2
+    stroke-dashoffset 35px
+    animation arrow-scroll-2 2s infinite 0.2s ease-in
+
+  .before-animate-2-1
+  .before-animate-2-2
+    stroke-dasharray 50px 50px
+
+  .before-animate-2-1
+    stroke-dashoffset -50px
+    animation arrow-scroll-3 2s infinite ease-in
+
+  .before-animate-2-2
+    stroke-dashoffset 50px
+    animation arrow-scroll-4 2s infinite ease-in
+
+@keyframes arrow-scroll-1
+  20%, 40%, 60%, 80%
+    stroke-dashoffset 0
+  100%
+    stroke-dashoffset 35px
+
+@keyframes arrow-scroll-2
+  20%, 40%, 60%, 80%
+    stroke-dashoffset 0
+  100%
+    stroke-dashoffset -35px
+
+@keyframes arrow-scroll-3
+  20%, 40%, 60%, 80%
+    stroke-dashoffset 0
+  100%
+    stroke-dashoffset: 50px
+
+@keyframes arrow-scroll-4
+  20%, 40%, 60%, 80%
+    stroke-dashoffset 0
+  100%
+    stroke-dashoffset: -50px

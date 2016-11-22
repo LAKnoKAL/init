@@ -1,0 +1,40 @@
+.works-list
+  display flex
+  flex-wrap wrap
+  width 75%
+  margin 50px auto 0
+
+  .work-item
+    position relative
+    flex-basis 50%
+    margin-bottom 20px
+    padding 0 20px
+
+    .item
+      &-screenshot
+      &-logo
+        transition all $animation-time ease-in-out
+
+      &-screenshot
+        width 100%
+        opacity .1
+
+      &-logo
+        absolute top 50% left 50%
+        max-width 50%
+        height auto
+        transform translate(-50%, -50%)
+
+    a
+      display flex
+      align-items center
+      justify-content center
+      border 1px solid $light-gray
+
+      &:hover
+        .item
+          &-screenshot
+            opacity 1
+
+          &-logo
+            opacity 0

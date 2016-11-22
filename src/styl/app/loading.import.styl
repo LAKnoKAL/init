@@ -1,0 +1,47 @@
+.loader-wrap
+  fixed top left right bottom
+  z-index 999
+  width 100vw
+  height 100vh
+  background $white
+
+.loader
+  absolute top 50% left 50%
+  width $loader-size
+  height $loader-size
+  transform translate(-50%, -50%)
+
+  .center
+    width $loader-size
+    height $loader-size
+    background $loader-color
+    border-radius 50%
+    animation center $loader-time ease-in-out infinite
+
+  .item
+    absolute top (($loader-size - $item-size) / 2) left right
+    width $item-size
+    height $item-size
+    margin auto
+    background $loader-color
+    border-radius 50%
+
+for $i in (1..8)
+  $loader-delay = $loader-delay + 0.2
+  $item-rotation = $item-rotation + 45
+
+  .item-{$i}
+    animation: 'anim-' + $i $loader-time ease-in-out infinite $loader-delay
+    animation-fill-mode: backwards
+
+  @keyframes anim-{$i}
+    0%, 60%, 100%
+      transform: rotate($item-rotation) translateX($loader-size) scale(1)
+    10%, 50%
+      transform: rotate($item-rotation) translateX(0) scale(1.5)
+
+@keyframes center
+  0%, 10%, 90%, 100%
+    transform scale(0.7)
+  45%, 55%
+    transform scale(1)
