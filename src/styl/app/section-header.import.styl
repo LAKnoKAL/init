@@ -1,10 +1,43 @@
-.page-header
-  overflow hidden
-  margin 0
-  padding 20px 0
+.section-header
+  margin 0 0 75px
+  padding 0
+  border none
 
   h2
+    position relative
     margin 0
-    font 4em $quicksand
+    font 2em $quicksand
     text-align center
-    color $green
+    color $gray
+    text-transform uppercase
+
+    &:after
+      content ''
+      position absolute
+      display inline-block
+      left 50%
+      bottom -15px
+      width 70px
+      height 2px
+      background $green
+      transform translateX(-50%)
+
+  p
+    margin 50px auto 0
+    max-width 600px
+    text-align center
+
+    @media (max-width 767px)
+      padding 0 15px
+
+.navbar-header
+  .navbar-brand
+    padding 0
+
+    @media (max-width 767px)
+      padding 0 15px
+
+  svg.white-logo
+    width 130px
+    height 56px
+

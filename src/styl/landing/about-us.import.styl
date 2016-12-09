@@ -1,0 +1,52 @@
+.about-us
+  text-align center
+  padding-bottom 30px
+
+  p
+    font-size 18px
+
+  .advantages-list
+    display flex
+    justify-content space-around
+    margin-top 50px
+
+    @media (max-width 991px) {
+      justify-content center
+      flex-wrap wrap
+    }
+
+    li
+      position relative
+      margin 0 15px 30px
+      padding-top 110px
+      width 135px
+
+      &:before
+        content ''
+        position absolute
+        display block
+        width 115px
+        height 115px
+        top 0
+        left 50%
+        border-radius 50%
+        border 3px solid $green
+        transform translateX(-50%)
+
+      &.kreative-team
+        &:before
+          background url("../img/icons/kreative.png") 50% 50% no-repeat;
+          background-size 70px auto
+
+      &.details-attention
+        &:before
+          background url("../img/icons/details-attention.png") 50% 50% no-repeat;
+          background-size 60px auto
+
+      &.latest-technologies
+        &:before
+          background url("../img/icons/be-in-trends.png") 50% 50% no-repeat;
+          background-size 70px auto
+
+    h3
+      font 20px/1.2 $quicksand

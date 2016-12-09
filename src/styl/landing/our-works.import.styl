@@ -1,40 +1,267 @@
+.our-works
+  position relative
+  padding 0
+  background url(../img/our-works-bg.jpg) 50% 50% no-repeat
+  background-size cover
+
+  .black-bg-wrap
+    display flex
+    min-height 100vh
+    align-items center
+    flex-direction column
+    justify-content center
+    padding-bottom 60px
+
+    .container
+      @media (max-width 767px)
+        width 100%
+
+  h2
+    color $white-transparent
+
 .works-list
-  display flex
-  flex-wrap wrap
-  width 75%
-  margin 50px auto 0
+  @media (min-width 768px)
+    display flex
+    flex-wrap wrap
+    justify-content space-between
 
   .work-item
+    overflow hidden
     position relative
-    flex-basis 50%
-    margin-bottom 20px
-    padding 0 20px
+    height 285px
 
-    .item
-      &-screenshot
-      &-logo
-        transition all $animation-time ease-in-out
+    @media (min-width 768px)
+      margin-bottom 0.5%
+      width 33%
 
-      &-screenshot
-        width 100%
-        opacity .1
+    @media (min-width: 992px) and (max-width 1199px)
+      height 245px
 
-      &-logo
-        absolute top 50% left 50%
+    @media (max-width 991px)
+      height 185px
+
+      @media (max-width 767px)
+        height 300px
+
+      @media (max-width 569px)
+        height 225px
+
+    > img
+      position absolute
+      left 50%
+      transform translateX(-50%);
+
+    &:hover .hover-block
+      opacity 1
+      height 100%
+
+    .hover-block
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      width 100%
+      height 20%
+      opacity 0
+      background linear-gradient(to top, #000 0%, rgba(0,0,0,.9) 25%, rgba(0,0,0,0) 100%);
+      transition all $animation-time ease-in-out
+
+      @media (max-width 1024px)
+        height 0
+
+      img
+        margin-bottom 50px
+        width auto
         max-width 50%
-        height auto
-        transform translate(-50%, -50%)
+
+      button
+        position absolute
+        left 50%
+        bottom 80px
+        background $green
+        border none
+        font 19px $quicksand
+        width 200px
+        text-align center
+        transition all $animation-time ease-in-out
+        z-index 99
+        outline none
+        transform translateX(-50%)
+        text-transform uppercase
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+
+        &:hover
+          box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
+
+  .owl-item
+    max-height 380px
+
+  .owl-prev,
+  .owl-next
+    position absolute
+    top 50%
+    display inline-block
+    width 35px
+    height 64px
+    transform translateY(-50%)
+
+  .owl-prev
+    left 10px
+    background url(../img/icons/arrow-left.png) no-repeat
+    background-size cover
+
+  .owl-next
+    right 10px
+    background url(../img/icons/arrow-right.png) no-repeat
+    background-size cover
+
+  .owl-dots
+    display flex
+    align-items center
+    justify-content center
+    margin-top 50px
+    text-align center
+
+    .owl-dot
+      display inline-block
+      margin-left 10px
+      width 12px
+      height 12px
+      background $gray
+      border-radius 50%
+      box-shadow 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24)
+
+      &.active
+        width 15px
+        height 15px
+        background $green
+
+.modal
+
+  .item-logo
+    max-width 300px
+
+    @media (max-width 767px)
+      max-width 230px
+
+  .header
+    display flex
+    align-items flex-start
+    justify-content space-between
+    padding 20px
+
+  &-content
+    background #2f2f2f
+    color #fff
+
+  .content-wrap
+    display flex
+    padding 25px
+
+    @media (max-width 991px)
+      flex-wrap wrap
+      justify-content center
+
+  .info-block
+    padding-right 20px
+    width 40%
+
+    @media (max-width 991px)
+      width 100%
+      order 2
 
     a
+      font 22px $quicksand
+      color $green
+
+    p
+      margin 20px 0
+
+  .img-block
+    position relative
+    padding-bottom 25px
+    width 60%
+
+    @media (max-width 991px)
+      width 90%
+
+    @media (max-width 767px)
+
+      @media (min-width 560px)
+        width 515px
+        height 320px
+
+    @media (max-width 559px)
+      padding-bottom 65px
+
+  .desktop
+    padding 0 40px 21px
+    max-width 575px
+    max-height 335px
+    background url(../img/icons/macbook-bottom.png) 50% 100% no-repeat
+    background-size contain
+
+    @media (max-width 559px)
+      padding 0 25px 12px
+
+    .desktop-wrap
+      padding 17px 15px
+      border-radius 13px 13px 0 0
+      background #000
+
+      @media (max-width 559px)
+        padding 10px 8px
+        border-radius 9px 9px 0 0
+
+    .img-wrap
+      overflow hidden
+      height 235px
+
+      @media (max-width 559px)
+        height 95px
+
+      img
+        min-height 100%
+
+
+
+  .mobile
+    position absolute
+    top 65px
+    left 0
+    width 115px
+
+    @media (max-width 559px)
+      top 30px
+      width 70px
+
+  .technology
+    margin 20px 0
+    text-align center
+
+    h3
+      margin-bottom 35px
+      font 25px $quicksand
+
+
+    .technologies-list
       display flex
-      align-items center
       justify-content center
-      border 1px solid $light-gray
+      margin 25px 0
 
-      &:hover
-        .item
-          &-screenshot
-            opacity 1
+      li
+        margin 0 10px
 
-          &-logo
-            opacity 0
+      img
+        max-width 50px
+
+  .close
+    font-size 30px
+    color $green
+    opacity 1
+    outline none
+    text-shadow none

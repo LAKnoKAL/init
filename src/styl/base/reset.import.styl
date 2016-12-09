@@ -3,9 +3,54 @@ html
   min-height 100%
 
 body
-  margin-bottom 55px
+  font 16px $openSans
+
+section
+  display flex
+  min-height 100vh
+  align-items center
+  justify-content center
+  padding 50px 0 60px
 
 ul
   margin 0
   padding 0
   list-style none
+
+a
+  &:hover,
+  &:focus
+    text-decoration none
+    outline none
+
+.white-logo
+  .st0
+    fill #4CAF50
+
+  .st1
+    fill #6C6C6C
+
+  .st2
+    fill #6C6C6C
+
+.black-logo
+  .st1
+    fill #4CAF50
+
+  .st2
+    fill #6C6C6C
+
+  .st3
+    fill #2B2B2B
+
+.scroll-top
+  display none
+  position fixed
+  bottom 30px
+  right 30px
+  cursor pointer
+  z-index 99999
+
+  .fa
+    font-size 55px
+    color $green
