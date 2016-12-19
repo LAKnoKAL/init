@@ -1551,6 +1551,9 @@ a:focus {
   height: 15px;
   background: #4caf50;
 }
+.modal {
+  z-index: 999999;
+}
 .modal .item-logo {
   max-width: 300px;
 }
@@ -1644,6 +1647,11 @@ a:focus {
 @media (max-width: 559px) {
   .modal .img-block {
     padding-bottom: 65px;
+  }
+}
+@media (max-width: 991px) and (max-width: 544px) {
+  .modal .img-block {
+    width: 80%;
   }
 }
 @media (max-width: 767px) and (min-width: 560px) {
