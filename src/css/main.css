@@ -991,7 +991,7 @@ a:focus {
 }
 @media (max-width: 559px) {
   .welcome .scroll-down {
-    bottom: 60px;
+    bottom: 75px;
   }
 }
 .welcome .scroll-down svg {
